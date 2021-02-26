@@ -12,12 +12,12 @@ let nombreTienda="Tortas DELI SAS";
 let direccionTienda="cll 100 sur # 90-3";
 let telefonoTienda1="8945674";
 let telefonoTienda2="3506545123";
-let tipoRestaurante="POSTRES";
+let tipoRestaurante="PIZZA";
 
 //3. Datos del producto
 let nombreProducto="Torta de chocolate-Mediana";
 let cantidadProducto=2;
-let precioIndividualProducto=10000;
+let precioIndividualProducto=5000;
 
 //4. Datos del envio
 const COSTOENVIO=10000;
@@ -26,7 +26,7 @@ let nombreRepartidor="PEPITO PEREZ";
 let costoTotalCompra=0;
  
 //PROCESO
-let costoInicial= precioIndividualProducto*cantidadProducto;
+let costoInicial= precioIndividualProducto*cantidadProducto; 
 let valorIVA= costoInicial*IVA;
 
 
@@ -35,12 +35,13 @@ if(tipoRestaurante=="POSTRES"){
 
     let valorDescuento= 20000;
     costoTotalCompra=costoInicial+valorIVA-valorDescuento+COSTOENVIO;
-
+    
     
 }else{
 
     let valorDescuento=costoInicial*0.1;
     costoTotalCompra=costoInicial+valorIVA-valorDescuento+COSTOENVIO;
+
 }
 
 
@@ -51,8 +52,5 @@ console.log(`Señor usuario ${nombreUsuario}:`);
 console.log("......................");
 console.log(`${nombreTienda}`);
 console.log(direccionTienda);
-console.log(`Gran Total: ${costoTotalCompra}`);
-console.log(nombreUsuario);
-console.log(`${nombreUsuario}`);
-
+console.log("valor Total: "+costoTotalCompra);
 
