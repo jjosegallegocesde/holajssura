@@ -17,35 +17,41 @@ let tipoRestaurante="POSTRES";
 //3. Datos del producto
 let nombreProducto="Torta de chocolate-Mediana";
 let cantidadProducto=2;
-let precioIndividualProducto=35000;
+let precioIndividualProducto=10000;
 
 //4. Datos del envio
 const COSTOENVIO=10000;
 const IVA=0.19;
 let nombreRepartidor="PEPITO PEREZ";
-let descuento=0.1;
 let costoTotalCompra=0;
-
+ 
 //PROCESO
 let costoInicial= precioIndividualProducto*cantidadProducto;
 let valorIVA= costoInicial*IVA;
-let valorDescuento= costoInicial*descuento;
 
-costoTotalCompra=costoInicial+valorIVA-valorDescuento+COSTOENVIO;
+
+
+if(tipoRestaurante=="POSTRES"){
+
+    let valorDescuento= 20000;
+    costoTotalCompra=costoInicial+valorIVA-valorDescuento+COSTOENVIO;
+
+    
+}else{
+
+    let valorDescuento=costoInicial*0.1;
+    costoTotalCompra=costoInicial+valorIVA-valorDescuento+COSTOENVIO;
+}
+
+
+
 
 //SALIDAS
 console.log(`Señor usuario ${nombreUsuario}:`);
 console.log("......................");
 console.log(`${nombreTienda}`);
 console.log(direccionTienda);
-//
-//
-//
-//
-//
-//
 console.log(`Gran Total: ${costoTotalCompra}`);
-
 console.log(nombreUsuario);
 console.log(`${nombreUsuario}`);
 
